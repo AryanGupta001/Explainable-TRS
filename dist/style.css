@@ -1,0 +1,147 @@
+:root {
+  --black: #000000,
+  --white: #ffffff,
+  --golden: #FFC32C,
+  --grey: #515151,
+  --peach: (243, 221, 210), ;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  position: relative;
+  overflow-y: hidden;
+}
+
+Nav {
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-inline: 0.5rem;
+  padding-block: 1rem;
+  background-color: rgba(233, 231, 182, 0.532);
+}
+Nav .nav-links {
+  justify-content: space-around;
+  max-width: 40vw;
+  width: 100%;
+  display: flex;
+  color: #FFF;
+}
+Nav .nav-links .links {
+  text-decoration: underline;
+  font-family: inherit;
+  color: #000;
+  font-size: 1.4em;
+}
+
+#Register {
+  background-color: #515151;
+  text-align: center;
+  border-radius: 2rem;
+  width: 15ch;
+  color: #FFF;
+}
+
+.HeroSection {
+  background-color: rgb(243, 221, 210);
+  z-index: 0;
+  position: absolute;
+  inset: 0 0 0 0;
+  display: grid;
+  place-content: center;
+  grid-template-rows: repeat(6, 1fr);
+}
+.HeroSection > img {
+  grid-row: 1/6;
+  grid-column: 1;
+  max-height: 120vh;
+  z-index: -1;
+  transform: translateY(-10%);
+}
+.HeroSection h1 {
+  color: #000;
+  text-align: center;
+  text-shadow: 2px 2px 4px #FFF;
+  stroke-width: 3;
+  filter: contrast(200%);
+  -webkit-text-stroke-color: #fff;
+  grid-row: 3/4;
+  grid-column: 1;
+}
+
+.form {
+  --Modal-button: rgba(186, 183, 183, 0.4);
+  display: flex;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding-inline: 1ch;
+  padding-block: 0.5ch;
+  background-color: #FFF;
+  border-radius: 3rem;
+  grid-column: 1;
+  grid-row: 5/6;
+  justify-content: space-between;
+}
+
+.form button {
+  background-color: var(--Modal-button);
+  color: inherit;
+  border: none;
+  font-size: 2em;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.form button:hover {
+  color: black;
+  background-color: wheat;
+}
+
+.form_input {
+  aspect-ratio: 6/1;
+  display: flex;
+}
+.form_input .icon {
+  height: -moz-fit-content;
+  height: fit-content;
+  aspect-ratio: 1;
+  border: solid black 1px;
+  padding: 0.8rem;
+  border-radius: 50%;
+}
+.form_input .icon svg {
+  height: 100%;
+  aspect-ratio: 1;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.form_input input {
+  height: -moz-fit-content;
+  height: fit-content;
+  border: none;
+  font-size: 1.2em;
+  margin-block: auto;
+  width: 9ch;
+}
+
+.btn__suggestion {
+  padding: 1ch 1.5ch;
+  background-color: #293356;
+  color: #FFF;
+  border-radius: 5em;
+  display: flex;
+  gap: 3ch;
+}
+.btn__suggestion > * {
+  margin-block: auto;
+}
+.btn__suggestion > button img {
+  transform: translateY(7%);
+}/*# sourceMappingURL=style.css.map */
